@@ -1,4 +1,4 @@
-const jwt = require(jsonwebtoken);
+const jwt = require("jsonwebtoken");
 const { jwtConfig } = require("../config");
 const { User } = require("../db/models");
 
@@ -47,7 +47,7 @@ const requireAuth = [
 
     const err = new Error("Unauthorized");
     err.title = "Unauthorized";
-    error.errors = ["Unauthorized"];
+    err.errors = ["Unauthorized"];
     err.status = 401;
     return next(err);
   },
