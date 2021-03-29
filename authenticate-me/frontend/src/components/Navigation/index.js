@@ -30,3 +30,5 @@ function Navigation({ isLoaded }) {
     </ul>
   );
 }
+
+export default Navigation;
