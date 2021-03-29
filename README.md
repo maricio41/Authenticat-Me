@@ -1,3 +1,3 @@
-# ModelStar
+# Welp!
 
-ModelStar is a Yelp clone that is designed to bring local fashion designers and the like and models looking for work together.
+Welp is a Yelp clone that allows users to read about aand write reviews as well as rate on local Restaurants.
