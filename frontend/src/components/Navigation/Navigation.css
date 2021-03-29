@@ -1,0 +1,6 @@
+Navigation {
+  display: flex;
+  border-bottom: 4px;
+  background-color: red;
+  font-size: 20px;
+}
