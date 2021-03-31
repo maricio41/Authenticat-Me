@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
           len: [1, 50],
         },
       },
-      username: {
+      userName: {
         type: DataTypes.STRING,
         allowNull: false,
 
@@ -66,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
           exclude: ["hashedPassword", "email", "createdAt", "updatedAt"],
         },
       },
-      scope: {
+      scopes: {
         currentUser: {
           attributes: { exclude: ["hashedPassword"] },
         },
@@ -77,8 +77,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   User.prototype.toSafeObject = function () {
-    const { id, username, email } = this;
-    return { id, username, email };
+    const { id, userName, email, firstName, lastName } = this;
+    return { id, userName, email, firstName, lastName };
   };
   User.prototype.validatePassword = function (password) {
     return bcrypt.compareSync(password, this.hashedPassword.toString());
@@ -92,7 +92,7 @@ module.exports = (sequelize, DataTypes) => {
     const user = await User.scope("loginUser").findOne({
       where: {
         [Op.or]: {
-          username: credential,
+          userName: credential,
           email: credential,
         },
       },
@@ -102,10 +102,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
 
-  User.signup = async function ({ username, email, password }) {
+  User.signup = async function ({ userName, email, password }) {
     const hashedPassword = bcrypt.hashSync(password);
     const user = await User.create({
-      username,
+      userName,
       email,
       hashedPassword,
     });
