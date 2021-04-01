@@ -1,6 +1,12 @@
-Navigation {
+.nav-bar {
   display: flex;
-  border-bottom: 4px;
-  background-color: red;
-  font-size: 20px;
+  flex-direction: row;
+  border: 2px solid black;
+}
+
+.login-signup {
+}
+
+.home-btn {
+  align-items: flex-start;
 }
