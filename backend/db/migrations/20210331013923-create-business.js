@@ -33,7 +33,7 @@ module.exports = {
       },
       phoneNumber: {
         allowNull: false,
-        type: Sequelize.STRING(12),
+        type: Sequelize.STRING(20),
         unique: true,
       },
       hours: {
@@ -48,12 +48,6 @@ module.exports = {
       yearsInBusiness: {
         allowNull: false,
         type: Sequelize.INTEGER,
-      },
-      ownerId: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        unique: true,
-        references: { model: "Users" },
       },
       createdAt: {
         allowNull: false,
