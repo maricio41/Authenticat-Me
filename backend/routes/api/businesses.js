@@ -6,9 +6,8 @@ const router = express.Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const businesses = await Business.findAll({
-      include: [Review, BizPhoto, Category],
-    });
+    const businesses = await Business.findAll({});
+    console.log("anything");
     return res.json(businesses);
   })
 );

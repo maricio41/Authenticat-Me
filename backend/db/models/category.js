@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Category.associate = function (models) {
-    Category.hasOne(models.Business, { foreignKey: "businessTypeId" });
+    Category.belongsTo(models.Business, { foreignKey: "businessTypeId" });
   };
   return Category;
 };

@@ -20,6 +20,7 @@ export const addBusiness = (businesses) => {
 
 //thunk
 export const getBusinesses = () => async (dispatch) => {
+  console.log("business thunk");
   const response = await csrfFetch("/api/businesses");
   if (!response.ok) {
     throw response;
@@ -27,6 +28,7 @@ export const getBusinesses = () => async (dispatch) => {
 
   const businesses = await response.json();
   dispatch(setBusinesses(businesses));
+  return response;
 };
 
 //reducer

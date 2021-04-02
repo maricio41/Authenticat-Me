@@ -29,7 +29,7 @@ function ReviewList() {
   };
   return (
     <div>
-      <div>{renderReviews()}</div>;
+      <div>{renderReviews()}</div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ReviewList from "./components/ReviewList";
+import BusinessList from "./components/BusinessList";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/reviews" exact={true}>
             <ReviewList />
+          </Route>
+          <Route path="/businesses" exact={true}>
+            <BusinessList />
           </Route>
         </Switch>
       )}

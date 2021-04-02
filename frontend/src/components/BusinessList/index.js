@@ -8,14 +8,16 @@ function BusinessList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getReviews());
+    dispatch(getBusinesses());
   }, [dispatch]);
 
   const renderBusinesses = () => {
     return Object.values(businesses).map((business) => {
       return (
-        <div className="biz-container">
-          <div className="biz-panel">{business.name}</div>
+        <div key={business.id} className="biz-container">
+          <div key={business.id} className="biz-panel">
+            {business.name}
+          </div>
         </div>
       );
     });
