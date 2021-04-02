@@ -17,8 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   Business.associate = function (models) {
-    Business.hasOne(model.Category, { foreignKey: "businessId" });
-    Business.hasMany(model.Review, { foreignKey: "businessId" });
+    Business.hasOne(models.Category, { foreignKey: "businessId" });
+    Business.hasMany(models.Review, { foreignKey: "businessId" });
+    Business.hasMany(models.Photo, { foreignKey: "businessId" });
   };
   return Business;
 };
