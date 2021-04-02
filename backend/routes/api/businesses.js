@@ -1,12 +1,14 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
-const { Business } = require("../../db/models/");
+const { Review, BizPhoto, Category, Business } = require("../../db/models/");
 const router = express.Router();
 
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const businesses = await Business.findAll();
+    const businesses = await Business.findAll({
+      include: [Review, BizPhoto, Category],
+    });
     return res.json(businesses);
   })
 );
