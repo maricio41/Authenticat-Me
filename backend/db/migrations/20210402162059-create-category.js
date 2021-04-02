@@ -12,10 +12,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      businessId: {
+      businessTypeId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: "Businesses" },
       },
       createdAt: {
         allowNull: false,

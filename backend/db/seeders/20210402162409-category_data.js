@@ -12,33 +12,32 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-
     return queryInterface.bulkInsert(
       "Categories",
       [
         {
           type: "Italian",
-          businessId: 5,
+          businessTypeId: 5,
         },
         {
           type: "Unknown",
-          businessId: 6,
+          businessTypeId: 6,
         },
         {
-          type: "Soul Food",
-          businessId: 4,
+          type: "Soul Food",
+          businessTypeId: 4,
         },
         {
           type: "Barbeque",
-          businessId: 3,
+          businessTypeId: 3,
         },
         {
           type: "Seafood",
-          businessId: 1,
+          businessTypeId: 1,
         },
         {
           type: "Steakhouse",
-          businessId: 2,
+          businessTypeId: 2,
         },
       ],
       {}
@@ -46,13 +45,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    /*
-      Add reverting commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkDelete('People', null, {});
-    */
     return queryInterface.bulkDelete("Categories", null, {});
   },
 };
