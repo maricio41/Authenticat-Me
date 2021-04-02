@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const sessionRouter = require("./session");
 const usersRouter = require("./users");
+const businessRouter = require("./businesses");
+const reviewRouter = require("./reviews");
 // const asyncHandler = require("express-async-handler");
 // const {
 //   setTokenCookie,
@@ -12,6 +14,10 @@ const usersRouter = require("./users");
 router.use("/session", sessionRouter);
 
 router.use("/users", usersRouter);
+
+router.use("/businesses", businessRouter);
+
+router.use("/reviews", reviewRouter);
 
 // router.get("/require-auth", requireAuth, (req, res) => {
 //   return res.json(req, res);

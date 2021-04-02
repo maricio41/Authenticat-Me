@@ -1,4 +1,5 @@
 "use strict";
+const faker = require("faker");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -25,7 +26,7 @@ module.exports = {
           phoneNumber: "(229)435-1000",
           hours:
             "Monday - Saturday 11am - Midnight, Sunday 12pm - 10pm Eastern",
-          bizUrl: "http://whitelobster.com",
+          bizUrl: "http://www.whitelobster.com",
           yearsInBusiness: 15,
         },
         {
@@ -38,7 +39,7 @@ module.exports = {
           phoneNumber: "(229)555-3300",
           hours:
             "Monday - Saturday 11am - Midnight, Sunday 12pm - 10pm Eastern",
-          bizUrl: "http://bloomingonion.net",
+          bizUrl: "http://wwww.bloomingonion.net",
           yearsInBusiness: 65,
         },
         {
@@ -62,7 +63,7 @@ module.exports = {
           postCode: "31701",
           phoneNumber: "(229)663-8787",
           hours: "Monday - Saturday 11am - 8pm Eastern, Sunday Closed",
-          bizUrl: "http://whitelobster.com",
+          bizUrl: "http://www.hurricanejackie.com",
           yearsInBusiness: 47,
         },
         {
@@ -74,7 +75,7 @@ module.exports = {
           postCode: "31707",
           phoneNumber: "(229)446-2444",
           hours: "Monday - Sunday 11am -11pm Eastern",
-          bizUrl: "http://littleitaly.io",
+          bizUrl: "http://wwww.littleitaly.io",
           yearsInBusiness: 5,
         },
         {
@@ -86,7 +87,7 @@ module.exports = {
           postCode: "31707",
           phoneNumber: "(229)SAY-WHAT",
           hours: "All day, every day!",
-          bizUrl: "http://itbebad.com",
+          bizUrl: "http://wwww.itbebad.com",
           yearsInBusiness: 200,
         },
       ],
