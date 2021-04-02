@@ -11,6 +11,12 @@ export const setBusinesses = (businesses) => {
     payload: businesses,
   };
 };
+export const addBusiness = (businesses) => {
+  return {
+    type: ADD_BUSINESS,
+    payload: businesses,
+  };
+};
 
 //thunk
 export const getBusinesses = () => async (dispatch) => {
