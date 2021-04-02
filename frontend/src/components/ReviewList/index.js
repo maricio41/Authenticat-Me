@@ -13,8 +13,8 @@ function ReviewList() {
   const renderReviews = () => {
     return Object.values(reviews).map((review) => {
       return (
-        <li>
-          {review.content} Rating: {review.rating}
+        <li className="review-panel">
+          {review.content} Rating: {review.rating} By: {review.User.userName}
         </li>
       );
     });
