@@ -12,6 +12,12 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING(100),
       },
+      photoUrl: {
+        allowNull: false,
+        type: Sequelize.STRING(255),
+        unique: true,
+      },
+
       address1: {
         allowNull: false,
         type: Sequelize.STRING(200),
@@ -48,6 +54,11 @@ module.exports = {
       yearsInBusiness: {
         allowNull: false,
         type: Sequelize.INTEGER,
+      },
+      categoryId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { models: "Categories" },
       },
       createdAt: {
         allowNull: false,

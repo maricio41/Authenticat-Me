@@ -1,22 +1,24 @@
-"use strict";
-const faker = require("faker");
+categories
+{
+type: "Italian",
+},
+{
+type: "Unknown",
+},
+{
+type: "Soul Food",
+},
+{
+type: "Barbeque",
+},
+{
+type: "Seafood",
+},
+{
+type: "Steakhouse",
+},
 
-module.exports = {
-  up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      return queryInterface.bulkInsert('People', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
-    */
-    return queryInterface.bulkInsert(
-      "Businesses",
-      [
-        {
+         {
           name: "White Lobster",
           photoUrl: "image goes here",
           address1: "1500 Main St",
@@ -101,13 +103,4 @@ module.exports = {
           bizUrl: "http://wwww.itbebad.com",
           yearsInBusiness: 200,
           categoryId: 2,
-        },
-      ],
-      {}
-    );
-  },
-
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("Businesses", null, {});
-  },
-};
+        }

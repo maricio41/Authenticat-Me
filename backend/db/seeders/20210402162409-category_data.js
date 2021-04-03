@@ -17,27 +17,21 @@ module.exports = {
       [
         {
           type: "Italian",
-          businessTypeId: 5,
         },
         {
           type: "Unknown",
-          businessTypeId: 6,
         },
         {
           type: "Soul Food",
-          businessTypeId: 4,
         },
         {
           type: "Barbeque",
-          businessTypeId: 3,
         },
         {
           type: "Seafood",
-          businessTypeId: 1,
         },
         {
           type: "Steakhouse",
-          businessTypeId: 2,
         },
       ],
       {}
