@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     "Business",
     {
       name: DataTypes.STRING,
+      photoUrl: DataTypes.STRING,
       address1: DataTypes.STRING,
       address2: DataTypes.STRING,
       city: DataTypes.STRING,
@@ -13,13 +14,14 @@ module.exports = (sequelize, DataTypes) => {
       hours: DataTypes.TEXT,
       bizUrl: DataTypes.STRING,
       yearsInBusiness: DataTypes.INTEGER,
+      categoryId: DataTypes.INTEGER,
     },
     {}
   );
   Business.associate = function (models) {
     Business.belongsTo(models.Category, { foreignKey: "categoryId" });
-    Business.hasMany(models.Review, { foreignKey: "businessId" });
     Business.hasMany(models.BizPhoto, { foreignKey: "businessId" });
+    Business.hasMany(models.Review, { foreignKey: "businessId" });
   };
   return Business;
 };
