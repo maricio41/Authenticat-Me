@@ -18,6 +18,7 @@ function BusinessList() {
           <div key={business.id} className="biz-panel">
             {business.name}
           </div>
+          <a href={`/add-review/${business.id}`}>Leave a Review</a>
         </div>
       );
     });

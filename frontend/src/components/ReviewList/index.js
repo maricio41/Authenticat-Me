@@ -15,7 +15,7 @@ function ReviewList() {
     return Object.values(reviews).map((review) => {
       return (
         <div className="review-panel">
-          <div className="inner-review-components">Business Name Goes here</div>
+          <div className="inner-review-components">{review.Business.name}</div>
           <div className="inner-review-components">{`"${review.content}"`}</div>
           <div className="inner-review-components">
             Star Rating: {review.rating}

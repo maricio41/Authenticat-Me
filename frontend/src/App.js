@@ -8,6 +8,10 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import ReviewList from "./components/ReviewList";
 import BusinessList from "./components/BusinessList";
+import HomePage from "./components/HomePage";
+import Footer from "./components/Footer";
+import ReviewForm from "./components/ReviewForm";
+import MyReviews from "./components/MyReviews";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,8 +25,19 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          <Route path="/" exact={true}>
+            <HomePage />
+            <ReviewList />
+            <Footer />
+          </Route>
           <Route path="/login">
             <LoginFormPage />
+          </Route>
+          <Route path="/add-review/:id" exact={true}>
+            <ReviewForm />
+          </Route>
+          <Route path="/my-reviews" exact={true}>
+            <MyReviews />
           </Route>
           <Route path="/signup">
             <SignupFormPage />

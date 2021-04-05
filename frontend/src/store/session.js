@@ -4,10 +4,12 @@ const SET_USER = "session/setUser";
 const REMOVE_USER = "session/removeUser";
 
 export const signup = (user) => async (dispatch) => {
-  const { username, email, password } = user;
+  const { firstName, lastName, username, email, password } = user;
   const response = await csrfFetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
+      firstName,
+      lastName,
       username,
       email,
       password,
@@ -51,6 +53,20 @@ export const login = (user) => async (dispatch) => {
   dispatch(setUser(data.user));
   return response;
 };
+
+export const demoLogin = () => async (dispatch) => {
+  const response = await csrfFetch("/api/session", {
+    method: "POST",
+    body: JSON.stringify({
+      credential: "Demo-lition",
+      password: "password",
+    }),
+  });
+  const data = await response.json();
+  dispatch(setUser(data.user));
+  return response;
+};
+
 export const restoreUser = () => async (dispatch) => {
   const response = await csrfFetch("/api/session");
   const data = await response.json();

@@ -31,7 +31,6 @@ module.exports = {
         type: Sequelize.STRING.BINARY,
       },
       avatarUrl: {
-        allowNull: false,
         type: Sequelize.STRING(256),
       },
       createdAt: {

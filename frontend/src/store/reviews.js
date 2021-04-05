@@ -27,6 +27,27 @@ export const getReviews = () => async (dispatch) => {
   const reviews = await response.json();
   dispatch(setReviews(reviews));
 };
+export const getUserReviews = (userId) => async (dispatch) => {
+  const response = await csrfFetch(`/api/reviews/${userId}`);
+  if (!response.ok) {
+    throw response;
+  }
+  const userReviews = await response.json();
+  dispatch(addReview(userReviews));
+};
+
+export const postReview = (review) => async (dispatch) => {
+  console.log(review);
+  const response = await csrfFetch("/api/reviews", {
+    method: "POST",
+    body: JSON.stringify(review),
+  });
+  if (!response.ok) {
+    throw response;
+  }
+  const userReviews = await response.json();
+  dispatch(addReview(userReviews));
+};
 //Reducer
 const reviewsReducer = (reviews = initialState, action) => {
   switch (action.type) {
@@ -38,7 +59,9 @@ const reviewsReducer = (reviews = initialState, action) => {
       }
       return newReviews;
     case ADD_REVIEW:
-      return reviews;
+      const newState = Object.assign({}, reviews);
+      newState.userReviews = action.payload;
+      return newState;
     default:
       return reviews;
   }
