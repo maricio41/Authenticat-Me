@@ -29,7 +29,7 @@ function Navigation({ isLoaded }) {
         </NavLink>
         <NavLink className="nav-link" to="/" onClick={logout}>
           {" "}
-          Logut
+          Logout
         </NavLink>
       </div>
     );
@@ -52,10 +52,6 @@ function Navigation({ isLoaded }) {
 
   return (
     <div className="nav-bar">
-      <div className="logo-icon">
-        welp <i class="fab fa-yelp"></i>
-      </div>
-
       <div className="right-nav-components">
         <div className="home-btn">
           <NavLink className="nav-link" exact to="/">

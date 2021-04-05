@@ -13,34 +13,38 @@ function HomePage() {
       <div className="home-container">
         <div className="home-image-container">
           <div className="home-image">
-            <img src="/images/welpbg-image.jpg" alt="welp-cover-image" />
+            <div className="background-image" alt="welp-cover-image">
+              <div className="logo-icon">
+                welp <i class="fab fa-yelp"></i>
+              </div>
+              <form id="search-bar">
+                <input
+                  style={{
+                    width: "20rem",
+                    background: "#F2F1F9",
+                    border: "none",
+                    padding: "0.5rem",
+                  }}
+                  // value={keyword}
+                  placeholder={"Where are you going?"}
+                  // onChange={(e) => setKeyword(e.target.value)}
+                />
+                <button
+                  // onClick={(e) => submit(e)}
+                  style={{
+                    background: "white",
+                    borderRadius: "50%",
+                    height: "30px",
+                    width: "30px",
+                  }}
+                  type="submit"
+                >
+                  <i class="fas fa-search logo"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
-        <form>
-          <input
-            style={{
-              width: "20rem",
-              background: "#F2F1F9",
-              border: "none",
-              padding: "0.5rem",
-            }}
-            // value={keyword}
-            placeholder={"Where are you going?"}
-            // onChange={(e) => setKeyword(e.target.value)}
-          />
-          <button
-            // onClick={(e) => submit(e)}
-            style={{
-              background: "white",
-              borderRadius: "50%",
-              height: "30px",
-              width: "30px",
-            }}
-            type="submit"
-          >
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
       </div>
     </>
   );

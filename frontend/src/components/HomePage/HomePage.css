@@ -1,0 +1,31 @@
+.home-container {
+  position: relative;
+  margin: 0 auto;
+  width: 922px;
+}
+.background-image {
+  background-image: url("../../images/welpbg-image.jpg");
+  height: 50%;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.home-image-container {
+}
+
+.home-image {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+#search-bar {
+  width: 40%;
+}

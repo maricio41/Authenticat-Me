@@ -1,5 +1,5 @@
 .nav-bar {
-  border: 1px solid black;
+  border: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,14 +7,13 @@
 }
 
 .logo-icon {
-  justify-content: flex-end;
-  align-items: center;
   color: red;
   font-size: 30px;
   font-family: Helvetica;
   font-weight: bold;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+  width: 15%;
 }
 
 .right-nav-components {
