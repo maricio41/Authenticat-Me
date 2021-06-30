@@ -1,7 +1,7 @@
 import { csrfFetch } from "./csrf";
 
 const SET_REVIEWS = "reviews/set";
-const ADD_REVIEW = "eviews/add";
+const ADD_REVIEW = "reviews/add";
 
 const initialState = {};
 //actions

@@ -9,7 +9,7 @@ function HomePage() {
   // }
 
   return (
-    <>
+    
       <div className="home-container">
         <div className="home-image-container">
           <div className="home-image">
@@ -46,7 +46,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-    </>
+
   );
 }
 

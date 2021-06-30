@@ -20,7 +20,7 @@ function ReviewForm() {
   };
 
   return (
-    <div>
+    <div review-form-container>
       <h1>Write a Review</h1>
       <form className="reviw-form" onSubmit={handleSubmit}>
         <textarea
@@ -30,6 +30,8 @@ function ReviewForm() {
           placeholder="boo"
         ></textarea>
         <select value={rating} onChange={(e) => setRating(e.target.value)}>
+          {" "}
+          Rating:
           <option value={1}>1</option>
           <option value={2}>2</option>
           <option value={3}>3</option>

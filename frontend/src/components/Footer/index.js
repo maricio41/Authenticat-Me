@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <>
-      <div className="footer-container" style={{ backgroundColor: "pink" }}>
+      <div className="footer-container" style={{ backgroundColor: "blue" }}>
         <div>
           <h3>About</h3>
         </div>
